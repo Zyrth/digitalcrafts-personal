@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css box model</title>
+
+    <style>
+    
+        .box {
+            background-color: black;
+            color: white;
+            margin: 100px 200px;
+
+            /* Order: Top -> Right -> Bottom -> Left */
+        }
+
+        .border-box {
+            border-width: 10px;
+            border-color: aqua;
+            border-style: solid;
+            margin: 10px 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box">
+        <p>This is an example.</p>
+    </div>
+    <div class="box">
+        <p>This is an example.</p>
+    </div>
+    <div class="box">
+        <p>This is an example.</p>
+    </div>
+    <div class="box">
+        <p>This is an example.</p>
+    </div>
+
+    <div class="border-box">Border Box</div>
+    <div class="border-box">Border Box</div>
+    <div class="border-box">Border Box</div>
+
+
+</body>
+</html>
