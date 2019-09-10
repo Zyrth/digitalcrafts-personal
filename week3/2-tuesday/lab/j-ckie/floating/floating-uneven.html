@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float layouts</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        .header {
+            background-color: #999;
+            color: black;
+            height: 10vh;
+            text-align: center;
+            padding-top:1rem;
+        }
+        .sidebar-left {
+            background-color: rgb(194, 167, 167);
+            color: rgb(128, 64, 64);
+            width: 40%;
+            text-align: center;
+        }
+        .sidebar-left img {
+            width: 40%;
+            height: auto;
+            padding-bottom: 10px;
+        }
+        .main {
+            background-color: rgb(202, 193, 152);
+            width: 60%;
+            float: right;
+            padding: 10px;
+        }
+        .footer {
+            clear: both;
+            background-color: rgb(59, 14, 14);
+            color:rgb(194, 167, 167);
+            bottom: 0;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>This is where the title of the website would go.</h1>
+    </div>
+    <div class="main">
+        <h1>Main Content</h1>
+        <br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, repellendus ex dolore, fugiat quaerat officia accusantium veniam at omnis accusamus tempora eius aliquam dolores cum! Assumenda, dolor quia iusto atque, deleniti laudantium ipsum, tempora est iste sed possimus facere sapiente magni sit amet molestiae similique rerum saepe doloribus non. Suscipit quas recusandae in alias sunt tenetur dolorum necessitatibus quisquam ut eaque sit facere voluptatum, possimus expedita, mollitia quod repudiandae delectus! Ea eum, nobis vero, laudantium pariatur dolorem omnis rerum doloremque, obcaecati aut veritatis nostrum quo consectetur impedit dolores dicta eaque? Magni molestiae eligendi consequatur. Labore itaque nostrum corporis atque explicabo.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo dicta tempora possimus libero necessitatibus sapiente quos impedit beatae molestiae qui!</p>
+        <br>
+        <h2>More stuff</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vero dolorum at harum commodi laborum voluptas ducimus ad eveniet impedit saepe praesentium, officiis ipsam possimus, placeat inventore recusandae enim a? Repellat necessitatibus explicabo illo eius aliquid saepe aperiam accusantium at aliquam culpa, ipsam, architecto voluptates reprehenderit dolore esse, vero ullam blanditiis odio incidunt quidem ut facilis. Obcaecati quod fugit delectus sunt voluptatum corporis tempora non eius esse illo, labore nihil?</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa commodi quibusdam labore deleniti dolore, sunt amet rerum nihil unde necessitatibus nam facere quaerat corporis est quisquam soluta alias ab tempora?</p>
+    </div>
+    <div class="sidebar-left">
+        <h3>SIDEBAR</h3>
+        <br>
+        <img src="3a7c0g.jpg" alt="This is where I'd put my nav bar if I had one meme">
+    </div>
+    <div class="footer">
+        <h1>FOOTER</h1>
+    </div>
+</body>
+</html>
