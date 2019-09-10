@@ -8,3 +8,10 @@
     margin-top: 200px;
     width: 300px;
 }
+
+.search input{
+    width: 550px;
+    height: 35px;
+    border-radius: 50px;
+    border: 1px solid rgb(185, 183, 183);
+}
