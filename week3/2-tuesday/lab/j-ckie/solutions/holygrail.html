@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Holy Grail solution</title>
+    <style>
+        * {
+            margin:0px;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: gray;
+        }
+        .header, .sidebar, .main {
+            padding: 20px;
+        }
+        /* .container {
+
+        } */
+        .sidebar {
+            width: 20%;
+            position: absolute;
+        }
+        .sidebar-left {
+            left:0;
+        }
+        .sidebar-right {
+            right:0;
+        }
+        .main {
+            width: 60%;
+            position: absolute;
+            left: 20%;
+        }
+        .footer {
+            position:absolute;
+            bottom:0;
+            background-color: lightgray;
+            width:100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar sidebar-left">
+            <h1>Sidebar left</h1>
+        </div>
+        <div class="sidebar sidebar-right">
+            <h1>sidebar right</h1>
+        </div>
+        <div class="main">
+            <h1>main</h1>
+        </div>
+    </div>
+
+</body>
+</html>
