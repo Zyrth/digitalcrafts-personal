@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal Exercise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin|Francois+One|Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+        /*  font-family: 'Francois One', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Cabin', sans-serif; */
+        
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #1d1c1c;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-family: 'Cabin', sans-serif;
+            color: #424141;
+            font-size: 1rem;
+        }
+
+        .header {
+            display: flex;
+            background-color: #ddcdcd;
+            padding: 1.5rem;
+        }
+        .header img {
+            width: 2rem;
+            margin: 0 1rem;
+        }
+        .header h1 {
+            font-family: 'Francois One', sans-serif;
+            color: #555;
+            font-size: 2rem;
+            font-weight: normal;
+        }
+        .container {
+            display:flex;
+            justify-content: center;
+        }
+        .main {
+            background-color: #fff;
+            width:60%;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .footer {
+            background-color: #ddcdcd;
+            bottom: 0;
+            width: 100%;
+            padding: 1.5rem;
+            color: #424141;
+            font-family: 'Cabin', sans-serif;
+        }
+
+        .popup-container {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal {
+            background-color: #999;
+            color:steelblue;
+            position: fixed;
+            top: 40vh;
+            padding: 2rem;
+            display:flex;
+            flex-flow: column;
+            align-items: center;
+            /* -moz-box-shadow:    3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc; */
+            box-shadow: 3px 3px 3px 4px rgba(153, 153, 153, 0.301);
+            z-index: 20;
+        }
+        .modal h1 {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+        .modal button {
+            border: 2px transparent solid;
+            border-radius: 5px;
+            width: 10rem;
+            height: 2rem;
+            margin-top: 2rem;
+        }
+        .modal button:hover {
+            border: 2px rgb(92, 90, 90) solid;
+        }
+        .modal-overlay {
+            z-index:10;
+            
+            background-color: rgba(99, 96, 96, 0.342);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="imgs/tjb-logo.svg" alt="Juicebox Bar logo">
+        <h1>Juicebox bar</h1>
+    </div>
+    <div class="container">
+        <div class="main">
+            <h1>Main content</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem alias quo, fugit suscipit, ipsam provident quidem porro impedit nulla odio molestiae vitae sit illum aliquam corporis placeat tenetur. Veniam consequuntur accusantium, obcaecati modi dicta nesciunt vero ab labore natus harum.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, nisi fugit, et aliquid laboriosam provident in culpa dolor quas voluptas deserunt, quam autem labore vel? Odio ab illo optio est provident architecto quas ad in possimus labore inventore cupiditate placeat, deserunt ex numquam corporis nam voluptate amet doloremque consequuntur quisquam totam assumenda officia. Libero facilis odio vitae debitis sapiente.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita dolorem reiciendis aliquid ratione natus, animi veritatis accusamus eum alias sapiente maiores, eaque aspernatur ipsa eveniet ipsum obcaecati in laboriosam quod soluta ipsam facilis. Vitae amet itaque veritatis dolore eos! Sed, recusandae eos, ullam atque assumenda tenetur nulla modi rem labore error at totam quo iusto sint consequuntur numquam beatae necessitatibus dolorum. Sequi minus blanditiis necessitatibus placeat porro. Quia harum veniam maxime laudantium deleniti aperiam accusamus quo fuga debitis placeat! Provident unde nisi exercitationem! Accusantium atque culpa non nemo nobis quae illum ad quia et nam. Accusantium, rem esse. Aperiam?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem alias quo, fugit suscipit, ipsam provident quidem porro impedit nulla odio molestiae vitae sit illum aliquam corporis placeat tenetur. Veniam consequuntur accusantium, obcaecati modi dicta nesciunt vero ab labore natus harum.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, nisi fugit, et aliquid laboriosam provident in culpa dolor quas voluptas deserunt, quam autem labore vel? Odio ab illo optio est provident architecto quas ad in possimus labore inventore cupiditate placeat, deserunt ex numquam corporis nam voluptate amet doloremque consequuntur quisquam totam assumenda officia. Libero facilis odio vitae debitis sapiente.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita dolorem reiciendis aliquid ratione natus, animi veritatis accusamus eum alias sapiente maiores, eaque aspernatur ipsa eveniet ipsum obcaecati in laboriosam quod soluta ipsam facilis. Vitae amet itaque veritatis dolore eos! Sed, recusandae eos, ullam atque assumenda tenetur nulla modi rem labore error at totam quo iusto sint consequuntur numquam beatae necessitatibus dolorum. Sequi minus blanditiis necessitatibus placeat porro. Quia harum veniam maxime laudantium deleniti aperiam accusamus quo fuga debitis placeat! Provident unde nisi exercitationem! Accusantium atque culpa non nemo nobis quae illum ad quia et nam. Accusantium, rem esse. Aperiam?</p>
+            <h1>Main content</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem alias quo, fugit suscipit, ipsam provident quidem porro impedit nulla odio molestiae vitae sit illum aliquam corporis placeat tenetur. Veniam consequuntur accusantium, obcaecati modi dicta nesciunt vero ab labore natus harum.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, nisi fugit, et aliquid laboriosam provident in culpa dolor quas voluptas deserunt, quam autem labore vel? Odio ab illo optio est provident architecto quas ad in possimus labore inventore cupiditate placeat, deserunt ex numquam corporis nam voluptate amet doloremque consequuntur quisquam totam assumenda officia. Libero facilis odio vitae debitis sapiente.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita dolorem reiciendis aliquid ratione natus, animi veritatis accusamus eum alias sapiente maiores, eaque aspernatur ipsa eveniet ipsum obcaecati in laboriosam quod soluta ipsam facilis. Vitae amet itaque veritatis dolore eos! Sed, recusandae eos, ullam atque assumenda tenetur nulla modi rem labore error at totam quo iusto sint consequuntur numquam beatae necessitatibus dolorum. Sequi minus blanditiis necessitatibus placeat porro. Quia harum veniam maxime laudantium deleniti aperiam accusamus quo fuga debitis placeat! Provident unde nisi exercitationem! Accusantium atque culpa non nemo nobis quae illum ad quia et nam. Accusantium, rem esse. Aperiam?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem alias quo, fugit suscipit, ipsam provident quidem porro impedit nulla odio molestiae vitae sit illum aliquam corporis placeat tenetur. Veniam consequuntur accusantium, obcaecati modi dicta nesciunt vero ab labore natus harum.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, nisi fugit, et aliquid laboriosam provident in culpa dolor quas voluptas deserunt, quam autem labore vel? Odio ab illo optio est provident architecto quas ad in possimus labore inventore cupiditate placeat, deserunt ex numquam corporis nam voluptate amet doloremque consequuntur quisquam totam assumenda officia. Libero facilis odio vitae debitis sapiente.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita dolorem reiciendis aliquid ratione natus, animi veritatis accusamus eum alias sapiente maiores, eaque aspernatur ipsa eveniet ipsum obcaecati in laboriosam quod soluta ipsam facilis. Vitae amet itaque veritatis dolore eos! Sed, recusandae eos, ullam atque assumenda tenetur nulla modi rem labore error at totam quo iusto sint consequuntur numquam beatae necessitatibus dolorum. Sequi minus blanditiis necessitatibus placeat porro. Quia harum veniam maxime laudantium deleniti aperiam accusamus quo fuga debitis placeat! Provident unde nisi exercitationem! Accusantium atque culpa non nemo nobis quae illum ad quia et nam. Accusantium, rem esse. Aperiam?</p>
+        </div>
+    </div>
+    <div class="footer">
+        Footer content
+    </div>
+    <div class="popup-container">
+        <div class="modal" id="modal">
+            <h1>This is a popup!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, alias!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi pariatur qui reprehenderit, ullam dolorum nesciunt eaque quaerat libero consequuntur fuga!</p>
+            <button>Click here for stuff!</button>
+        </div>
+        <div class="modal-overlay" id="modal-overlay">
+
+        </div>
+    </div> 
+</body>
+</html>

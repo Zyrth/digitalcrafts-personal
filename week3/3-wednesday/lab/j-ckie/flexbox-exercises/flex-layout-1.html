@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Layout 1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin|Francois+One|Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+        /*  font-family: 'Francois One', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Cabin', sans-serif; */
+        
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+        }
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #1d1c1c;
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-family: 'Cabin', sans-serif;
+            color: #424141;
+            font-size: 1rem;
+        }
+
+        .header {
+            display: flex;
+            background-color: #ddcdcd;
+            padding: 1.5rem;
+        }
+        .header img {
+            width: 2rem;
+            margin: 0 1rem;
+        }
+        .header h1 {
+            font-family: 'Francois One', sans-serif;
+            color: #555;
+            font-size: 2rem;
+            font-weight: normal;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar-left {
+            background-color: #999;
+            left: 0;
+            width: 300px;
+            flex-grow: 1;
+            padding: 2rem;
+        }
+        .main {
+            background-color:rosybrown;
+            flex-grow:2;
+            padding: 2rem;
+        }
+        .footer {
+            position: absolute;
+            background-color: #ddcdcd;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 2rem;
+            color: #1d1c1c;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="img/tjb-logo.svg" alt="Juicebox Bar logo">
+        <h1>Juicebox bar</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar-left">
+            <h1>Sidebar content</h1>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>Main content</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem alias quo, fugit suscipit, ipsam provident quidem porro impedit nulla odio molestiae vitae sit illum aliquam corporis placeat tenetur. Veniam consequuntur accusantium, obcaecati modi dicta nesciunt vero ab labore natus harum.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, nisi fugit, et aliquid laboriosam provident in culpa dolor quas voluptas deserunt, quam autem labore vel? Odio ab illo optio est provident architecto quas ad in possimus labore inventore cupiditate placeat, deserunt ex numquam corporis nam voluptate amet doloremque consequuntur quisquam totam assumenda officia. Libero facilis odio vitae debitis sapiente.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita dolorem reiciendis aliquid ratione natus, animi veritatis accusamus eum alias sapiente maiores, eaque aspernatur ipsa eveniet ipsum obcaecati in laboriosam quod soluta ipsam facilis. Vitae amet itaque veritatis dolore eos! Sed, recusandae eos, ullam atque assumenda tenetur nulla modi rem labore error at totam quo iusto sint consequuntur numquam beatae necessitatibus dolorum. Sequi minus blanditiis necessitatibus placeat porro. Quia harum veniam maxime laudantium deleniti aperiam accusamus quo fuga debitis placeat! Provident unde nisi exercitationem! Accusantium atque culpa non nemo nobis quae illum ad quia et nam. Accusantium, rem esse. Aperiam?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem alias quo, fugit suscipit, ipsam provident quidem porro impedit nulla odio molestiae vitae sit illum aliquam corporis placeat tenetur. Veniam consequuntur accusantium, obcaecati modi dicta nesciunt vero ab labore natus harum.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatem, nisi fugit, et aliquid laboriosam provident in culpa dolor quas voluptas deserunt, quam autem labore vel? Odio ab illo optio est provident architecto quas ad in possimus labore inventore cupiditate placeat, deserunt ex numquam corporis nam voluptate amet doloremque consequuntur quisquam totam assumenda officia. Libero facilis odio vitae debitis sapiente.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed expedita dolorem reiciendis aliquid ratione natus, animi veritatis accusamus eum alias sapiente maiores, eaque aspernatur ipsa eveniet ipsum obcaecati in laboriosam quod soluta ipsam facilis. Vitae amet itaque veritatis dolore eos! Sed, recusandae eos, ullam atque assumenda tenetur nulla modi rem labore error at totam quo iusto sint consequuntur numquam beatae necessitatibus dolorum. Sequi minus blanditiis necessitatibus placeat porro. Quia harum veniam maxime laudantium deleniti aperiam accusamus quo fuga debitis placeat! Provident unde nisi exercitationem! Accusantium atque culpa non nemo nobis quae illum ad quia et nam. Accusantium, rem esse. Aperiam?</p>
+        </div>
+    </div>
+    <div class="footer">
+        Footer content
+    </div>
+</body>
+</html>
