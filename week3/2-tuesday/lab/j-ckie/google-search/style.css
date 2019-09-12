@@ -78,3 +78,15 @@ button:hover {
     color: #232323;
     border: 1px solid #CCC;
 }
+
+.blurb {
+    font-size: .8rem;
+}
+
+.blurb a {
+    color: blue;
+}
+
+.blurb a:hover {
+    text-decoration: underline;
+}
