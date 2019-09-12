@@ -20,6 +20,10 @@ body {
     text-decoration: line-through;
 }
 
+.centered {
+    text-align: center;
+}
+
 .header {
     background-image: url("imgs/palace-of-fine-art.jpg");
     background-attachment: fixed;
@@ -100,4 +104,29 @@ body {
     background-size: cover;
     width: 100vw;
     height: 40vh;
+}
+
+.social-media {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #F9533F;
+}
+
+.social-media a:hover {
+    color:rgb(168, 43, 29);
+}
+
+@media screen and (min-width: 800px) {
+    .content {
+        margin: 5rem 10rem;
+    }
+    .image1 {
+        background-position: center;
+    }
 }
