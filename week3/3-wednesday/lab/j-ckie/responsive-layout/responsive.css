@@ -12,6 +12,7 @@ h1 {
 body {
     display: flex;
     font-family: 'EB Garamond', serif;
+    font-size: 1.3rem;
     width: 100vw;
     flex-flow: column;
 }
