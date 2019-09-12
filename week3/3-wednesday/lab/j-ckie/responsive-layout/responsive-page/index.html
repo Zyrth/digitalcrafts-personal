@@ -22,6 +22,10 @@
             font-size: 1rem;
         }
 
+        body {
+            width: 100vw;
+        }
+
         .header {
             background-color: rgb(185, 207, 248);
             display: flex;
@@ -83,7 +87,78 @@
         .section2 {
             display:flex;
             flex-flow: column;
+            width: 100%;
+            padding: 3rem 2rem;
+            /* align-items: center; */
+            text-align: center;
+        }
+
+        .section3 {
+            display: flex;
+            flex-flow:column;
+            align-items: center;
+            padding: 3rem 2rem;
+        }
+
+        .section3 img {
+            width: 15rem;
+            border: 1px #999 solid;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .person-content {
+            display: flex;
+            flex-flow: column;
+            text-align: center;
+        }
+
+        .footer {
+            height: 15vh;
+            background-color:rgb(185, 207, 248);
+            display: flex;
+            align-items: center;
             justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .title {
+            padding: 4rem 2rem 0 2rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 800px) {
+
+            .left-side img {
+                width: 3rem;
+            }
+
+            .left-side h1 {
+                font-size: 2rem;
+            }
+
+            .section1 {
+                height: 50vh;
+            }
+
+            .section2 {
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+            }
+
+            .section2-content {
+                padding: 2rem;
+            }
+
+            .section3 {
+                display: flex;
+                flex-flow: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 4rem;
+            }
+
         }
 
     </style>
@@ -102,34 +177,63 @@
             </nav>
         </div>
     </div>
-    <div class="section1">
-        <h1>We Are Awesome</h1>
-        <br>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, saepe.</p>
+    
+        <div class="section1">
+            <h1>We Are Awesome</h1>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, saepe.</p>
+        </div>
+    <div class="container">
+        <div class="title"><h3>Some Stuff About How Awesome We Are</h3></div>
+        <div class="section2">
+            <div class="section2-content">
+                <br>
+                <h4>Awesome list one</h4>
+                <br>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+            <br>
+            <div class="section2-content">
+                    <br>
+                    <h4>Awesome list two</h4>
+                    <br>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+            </div>
+            <br>
+            <div class="section2-content">
+                <br>
+                <h4>Awesome list three</h4>
+                <br>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="title"><h2>Our Awesome Team</h2></div>
+        <div class="section3">
+            <div class="person-content">
+                <img src="imgs/placeholder-images-image_large.png" alt="pic of awesome person 1">
+                <h3>Awesome Person 1</h3>
+            </div>
+            <div class="person-content">
+                <img src="imgs/placeholder-images-image_large.png" alt="pic of awesome person 2">
+                <h3>Awesome Person 2</h3>
+            </div>
+        </div>
     </div>
-    <div class="section2">
-        <h3>Some Stuff About How Awesome We Are</h3>
-        <br>
-        <ul>
-            <b>Awesome list one</b>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-        </ul>
-        <br>
-        <ul>
-            <b>Awesome list two</b>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-        </ul>
-        <br>
-        <ul>
-            <b>Awesome list three</b>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Lorem ipsum dolor sit amet.</li>
-        </ul>
+
+    <div class="footer">
+        <p>"Awesome" is written so many times on this page that it's starting to look like a foreign word...</p>
     </div>
     
 </body>
