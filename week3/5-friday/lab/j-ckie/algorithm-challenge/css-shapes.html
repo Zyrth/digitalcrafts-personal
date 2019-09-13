@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Shapes</title>
+    <style>
+        /* Square
+        Rectangle
+        Oval
+        Circle
+        Triangle pointing down
+        Triangle pointing left
+        Right triangle
+        Trapezoid
+        6 Point star
+        Square Diamond
+        Pacman */
+
+        body {
+            display:flex;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+
+        .square {
+            width: 5rem;
+            height: 5rem;
+            background-color: red;
+        }
+
+        .rectangle {
+            width: 10rem;
+            height: 5rem;
+            background-color: blue;
+        }
+
+        .oval {
+            width: 5rem;
+            height: 10rem;
+            border-radius: 50%;
+            background-color: green;
+        }
+
+        .circle {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: orange;
+        }
+
+        .triangle-pointing-down {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid cyan;
+        }
+
+        .triangle-pointing-left {
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-right: 100px solid pink;
+        }
+        
+        .right-triangle {
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid gray;
+            border-left: 75px solid transparent;
+        }
+
+        .trapezoid {
+            width: 100px;
+            height: 0;
+            border-bottom: 100px solid purple;
+            border-right: 25px solid transparent;
+            border-left: 25px solid transparent;
+        }
+
+        .six-point-star {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-bottom: 150px solid slateblue;
+        }
+
+        .six-point-star:after {
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: 50px;
+            left: -75px;
+            content: " ";
+            border-left: 75px solid transparent;
+            border-right: 75px solid transparent;
+            border-top: 150px solid slateblue;
+        }
+
+         .square-diamond {
+             width: 0;
+             height: 0;
+             border: 50px solid transparent;
+             border-bottom-color: tomato;
+             position: relative;
+         }
+
+         .square-diamond:after {
+             position: absolute;
+             content: " ";
+             width: 0;
+             height: 0;
+             left: -50px;
+             top: 50px;
+             border: 50px solid transparent;
+             border-top-color: tomato;
+         }
+            
+        .pacman {
+            width: 0;
+            height: 0;
+            border-right: 60px solid transparent;
+            border-top: 60px solid #f8df00;
+            border-left: 60px solid #f8df00;
+            border-bottom: 60px solid #f8df00;
+            border-radius: 60px;
+        }
+        
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square"></div>
+        <div class="rectangle"></div>
+        <div class="oval"></div>
+        <div class="circle"></div>
+        <div class="triangle-pointing-down"></div>
+        <div class="triangle-pointing-left"></div>
+        <div class="right-triangle"></div>
+        <div class="trapezoid"></div>
+        <div class="six-point-star"></div>
+        <div class="square-diamond"></div>
+        <div class="pacman"></div>
+
+        <div class="triangle-up"></div>
+    </div> 
+</body>
+</html>
