@@ -60,6 +60,18 @@ h1 {
     color: #fff;
 }
 
+#about-hero {
+    background-image: url("imgs/spring-rolls.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#about-hero h1 {
+    color: #fff;
+}
+
 .main {
     margin: 5rem 0;
     display: flex;
