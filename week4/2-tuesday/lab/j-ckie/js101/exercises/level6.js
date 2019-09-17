@@ -23,5 +23,8 @@ function lvl6exercise1 (num) {
   function lvl6exercise3 () {
     // Empty this array using a while loop and return it
     var arr = ['hello', 'hello', 'hello', 'hello', 'hello', 'hello', 'hello', 'hello', 'hello', 'hello']
-    
+    while(arr.length) {
+      arr.pop();
+    }
+    return arr;
   }
