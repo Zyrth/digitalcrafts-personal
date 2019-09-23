@@ -1,6 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Roboto+Condensed&display=swap');
+* {
+    margin: 0;
+}
 
 html {
     height: 100%;
 }
 
+body {
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#table {
+    height: 80%;
+    width: 75%;
+    background-color: #013801;
+    border-radius: 20rem;
+    display: flex;
+}

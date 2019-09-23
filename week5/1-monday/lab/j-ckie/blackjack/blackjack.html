@@ -10,8 +10,6 @@
 <body>
 
     <div id="table">
-
-        <div id="messages"></div>
         
         <label>Dealer: </label>
         
@@ -34,21 +32,24 @@
             <img src="imgs/9_of_diamonds.png" alt="9 of diamonds">
             <img src="imgs/ace_of_diamonds.png" alt="ace of diamonds">
         </div>
-        
-        <div class="buttons">
-
-            <button id="btnDeal" class="style-button">Deal</button>
-            
-            <button id="btnHit" class="style-button">Hit</button>
-            
-            <button id="btnStand" class="style-button">Stand</button>
-        
-        </div>
 
         <div class="rules">
             <a href="rules.html">Click Here For Rules</a>
         </div>
         
+    </div>
+
+    <div class="panel">
+
+        <div id="message">Press Deal to start game</div>
+
+        <div class="style-button">
+            <button id="btnDeal" class="blue" type="button">Deal</button>
+            
+            <button id="btnHit" class="green" type="button" disabled>Hit</button>
+            
+            <button id="btnStand" class="red" type="button" disabled>Stand</button>
+        </div>
     </div>
     
 
