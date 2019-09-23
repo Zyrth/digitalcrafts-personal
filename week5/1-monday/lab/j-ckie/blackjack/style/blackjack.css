@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Roboto+Condensed&display=swap');
 
+/* Style the table and buttons */
 body {
     display: flex;
     justify-content: center;
@@ -31,6 +32,14 @@ a {
 
 #table label {
     margin: 1rem 0 0 0;
+}
+
+.rules a{
+    color: white;
+}
+
+.rules a:hover {
+    color: rgba(255, 255, 255, 0.616);
 }
 
 .points {
@@ -73,3 +82,4 @@ a {
 .style-button:hover {
     background-color: rgba(255, 255, 255, 0.589);
 }
+
