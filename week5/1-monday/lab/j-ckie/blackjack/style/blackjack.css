@@ -16,22 +16,11 @@ a {
     text-decoration: none;
 }
 
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.popup .popuptext {
-    visibility: hidden;
-
-}
-
 #table {
     width: 70vw;
     height: 65vh;
     background-color: #477148;
-    border-radius: 15rem;
+    border-radius: 20rem;
     border: #caa472 1.5rem solid;
     display: flex;
     justify-content: center;
