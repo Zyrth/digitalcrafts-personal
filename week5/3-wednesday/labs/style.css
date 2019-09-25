@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    width: 60vw;
+    width: 50vw;
     height: 100vh;
     display: flex;
     flex-flow: column;
