@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+html {
+    background-image: url("life-is-beautiful.png");
+    background-size: cover;
+    background-position-y: 110rem;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 3rem;
+    color: #341e20;
+}
+
+h2, h3 {
+    margin: 1rem;
+    color: #255366;
+}
+
+p {
+    color: #34616d;
+}
