@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promise notes</title>
+</head>
+<body>
+    <script>
+        // sets promise var
+        // var promise = new Promise(function(resolve, reject) {
+        //     // timer similar to the one in Python
+
+        //     // setTimeout(thingToRun, lengthOfTime);
+        //     setTimeout(function() {
+        //         // 'resolve' function fulfills the promise using the 'data' in the ()
+        //         resolve("Hello world");
+
+        //         // 'reject' function fulfills the promise using the 'data' in the () if promise fails
+        //         // reject("This is the end");
+        //     }, 2000);
+        // });
+        // call 'promise' var and use 'then' to bind a callback to the promise so you can use the data given in the 'resolve' function
+        // promise.then(function(data) {
+        //     console.log(data);
+        // }); 
+        // // can even bind more than one call back
+        // promise.then(function(data) {
+        //     console.log(data + ' 1');
+        // });
+        // promise.then(function(data) {
+        //     console.log(data + ' 2');
+        // });
+        // promise.then(function(data) {
+        //     console.log(data + ' 3');
+        // });
+
+        // 'reject' function is used to trigger an error. When you use 'then', you can give 2 functions. The first one is used for when the promise successfully runs and exits successfully and the second is used when the promise encounters an error. (how people know if their code fails?)
+
+        // promise.then(function success(data) {
+        //     // prints "Hello world" if promise is successful
+        //     console.log(data);
+        //     // prints error if promise is unsuccessful?
+        // }, function error(data) {
+        //     console.error(data);
+        // });
+
+        // // can still bind multiple callbacks to 'reject'
+        // promise.then(function success(data) {
+        //     console.log(data);
+        // }, function error(data) {
+        //     console.error(data + ' 2');
+        // });
+
+
+        // can call 'resolve' and 'reject' as many times as you want, but nothing will happen. Once the promise is finished, it will not restart
+
+        var promise = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve("Hello world");
+                resolve("Hello world2");
+                resolve("Hello world3");
+            }, 1000);
+        });
+
+        promise.then(function(data) {
+            console.log(data);
+        });
+
+        // ONLY PRINTS THE VERY FIRST 'RESOLVE'!! 
+
+    </script>
+</body>
+</html>
