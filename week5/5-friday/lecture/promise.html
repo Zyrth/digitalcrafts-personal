@@ -10,10 +10,8 @@
     <script>
         // sets promise var
         var promise = new Promise(function(resolve, reject) {
-            // timer similar to the one in Python
-
-            // setTimeout(thingToRun, lengthOfTime);
-            setTimeout(function() {
+            // timer similar to the one in Python            
+            setTimeout(function() { // setTimeout(thingToRun, lengthOfTime);
                 // 'resolve' function fulfills the promise using the 'data' in the ()
                 resolve("Hello world");
 
@@ -22,19 +20,19 @@
             }, 2000);
         });
         // call 'promise' var and use 'then' to bind a callback to the promise so you can use the data given in the 'resolve' function
-        // promise.then(function(data) {
-        //     console.log(data);
-        // }); 
-        // // can even bind more than one call back
-        // promise.then(function(data) {
-        //     console.log(data + ' 1');
-        // });
-        // promise.then(function(data) {
-        //     console.log(data + ' 2');
-        // });
-        // promise.then(function(data) {
-        //     console.log(data + ' 3');
-        // });
+        promise.then(function(data) {
+            console.log(data);
+        }); 
+        // can even bind more than one call back
+        promise.then(function(data) {
+            console.log(data + ' 1');
+        });
+        promise.then(function(data) {
+            console.log(data + ' 2');
+        });
+        promise.then(function(data) {
+            console.log(data + ' 3');
+        });
 
         // 'reject' function is used to trigger an error. When you use 'then', you can give 2 functions. The first one is used for when the promise successfully runs and exits successfully and the second is used when the promise encounters an error. (how people know if their code fails?)
 
