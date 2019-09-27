@@ -73,14 +73,14 @@
             document.getElementById("start-timer").innerHTML = text;
         }
 
-        var duration = 10
+        var duration = 10;
 
         function buttonStart(){
             var start = Date.now();
             // startTimerText(text);
             var promise = new Promise(function(resolve, reject) {
 
-                var time = 0
+                var time = 0;
                 setTimeout(function() {
                     time = Math.floor((Date.now() - start)/1000);
                     document.getElementById("elapsed-time").innerHTML = "SECONDS ELAPSED:  " + time;

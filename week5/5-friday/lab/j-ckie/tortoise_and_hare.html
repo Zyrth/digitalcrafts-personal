@@ -26,6 +26,27 @@
             width: 80vw;
             justify-content: space-around;
             align-items: center;
+
+        }
+
+        .contestant {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        .button {
+            width: 7.5rem;
+            height: 3rem;
+            border: 1px #000 solid;
+            border-radius: 10rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin: 4rem;
+        }
+
+        .button:hover {
+            border: 1px #999 solid;
+            color: #999;
         }
 
     </style>
@@ -42,17 +63,62 @@
         </ul>
     </div>
 
+    <div id="winner"></div>
+
+    <button type=button class="button" onclick="startRace()">START RACE</button>
+
     <div class="animals">
-        <div id="hare">
-            HALLO AM BUN
+
+
+        <div id="hare" class="contestant">
+            
         </div>
-        <div id="tortoise">
-            HALLO AM TURT
+        <div id="tortoise" class="contestant">
+            
         </div>
     </div>
 
 
     <script>
+
+
+        var duration = 10;
+
+        function startRace() {
+
+            var startTime = Date.now();
+
+            // promise for hare
+            var hare = new Promise(function(resolve, reject) {
+                var timeHare = 0;
+                setTimeout(function() {
+                    timeHare = Math.floor((Date.now() - startTime) / 1000);
+                    document.getElementById("hare").innerHTML = "Hare's time:  " + timeHare + " seconds";
+                }, Math.random() * duration * 1000);
+                return hare;
+            });
+            // promise for tortoise
+            var tortoise = new Promise(function(resolve, reject) {
+                var timeTortoise = 0;
+                setTimeout(function() {
+                    timeTortoise = Math.floor((Date.now() - startTime) / 1000);
+                    document.getElementById("tortoise").innerHTML = "Tortoise's time:  " + timeTortoise + " seconds";
+                }, Math.random() * duration * 1000);
+                return tortoise;
+            });
+
+            // win conditions??? 
+            var win = new Promise(function(resolve, reject) {
+                
+                if (tortoise < hare) {
+                    document.getElementById("winner").innerHTML = "Tortoise wins!";
+                } else if (hare < tortoise) {
+                    document.getElementById("winner").innerHTML = "Hare wins!";
+                } else if (hare === tortoise) {
+                    document.getElementById("winner").innerHTML = "Tie!"
+                }
+            });
+        }
 
     </script>
 </body>
