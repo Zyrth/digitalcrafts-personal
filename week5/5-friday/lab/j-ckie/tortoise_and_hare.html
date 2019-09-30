@@ -106,32 +106,6 @@
                 }, Math.random() * duration * 1000);
                 resolve(timeTortoise);
             });
-
-            // win conditions??? 
-
-            tortoise.then(function(value) {
-                var tortoiseTimeRace = value;
-                console.log(tortoiseTimeRace)
-            });
-
-            // var win = new Promise(function(resolve, reject) {
-                
-            //     //wait 10 seconds before doing this o ok
-            //     // but this still doesn't display, i don't think -- yeah it doesn't work, the hare and tortoise times display but the win condition thing below doesn't do anything
-            //     //try eit 
-            //     console.log(tortoise);
-            //     console.log(hare);
-
-            //     setTimeout(function(){
-            //         if (tortoise < hare) {
-            //             document.getElementById("winner").innerHTML = "Tortoise wins!";
-            //         } else if (hare < tortoise) {
-            //             document.getElementById("winner").innerHTML = "Hare wins!";
-            //         } else if (hare === tortoise) {
-            //             document.getElementById("winner").innerHTML = "Tie!"
-            //         }
-            //     },10000);
-            // });
         }
 
     </script>
